@@ -136,17 +136,43 @@ print(mensaje)
 # EJERCICIOS
 ###
 
+if(system("clear") != 0): system("cls")
+print("Ejercicios de práctica")
 # Ejercicio 1: Determinar el mayor de dos números
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
 
+print("\n 1. Exercise")
+value1, value2 = map(float, input("insert values:").split())
+
+if value1 == value2 :
+  print("\t Values are the same")
+elif value1 > value2:
+  print(f"\t {value1} is greater than {value2}")
+else :
+  print(f"\t {value2} is greater than {value1}")
+
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
+print("2. Exercise")
+sign = input("Enter an operation sign: ")
+operation_sign = ["-","/","*","+"]
+
+if(operation_sign.__contains__(sign)):
+  result = eval(f"{value1} {sign} {value2}")
+else : 
+  result = "NAN"
+print(f"{value1} {sign} {value2} = {result}")
 
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+
+year = int(input("Enter a year: "))
+
+print("Bisiesto" if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0) else "No bisiesto")
+
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -155,3 +181,16 @@ print(mensaje)
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+
+age = int(input("Enter an age"))
+
+if age <= 2 :
+  print("Bebe")
+elif age <= 13:
+  print("Niño")
+elif age <= 17:
+  print("Adolescente")
+elif age <= 64:
+  print("Adulto")
+else:
+  print("Adulto mayor")
