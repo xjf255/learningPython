@@ -92,3 +92,9 @@ mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40)
 # y convertirlos en funciones
 # e intentar utilizar todos los casos y conceptos
 # que hemos visto hasta ahora
+
+def imprimir_numeros_ingresados(*args):
+  for num in args:
+    print(num)
+
+imprimir_numeros_ingresados(*list(range(1,11)))
