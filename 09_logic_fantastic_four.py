@@ -14,3 +14,10 @@ Crea una función en Python que reciba una cadena de texto. Esta función debe c
 - Si las cantidades no son iguales, la función debe retornar False.
 - En el caso de que no aparezca ninguna de las dos letras en la cadena, se entiende que el equilibrio se mantiene (0 = 0), por lo que la función debe retornar True.
 """
+
+def is_alliance_balanced(text: str) -> bool:
+    if text is None:
+        return False
+    count_r = text.lower().count('r')
+    coutn_j = text.lower().count('j')
+    return count_r == coutn_j or (count_r == 0 and coutn_j == 0)
